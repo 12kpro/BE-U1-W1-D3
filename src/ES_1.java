@@ -10,11 +10,11 @@ public class ES_1 {
 		testWhile();
 	}
 
-	static String stringaPariDispari(String str) {
-		return str.length() %2 == 0 ? "pari": "dispari";
+	static Boolean stringaPariDispari(String str) {
+		return str.length() %2 == 0 ? true : false;
 	}
 	static Boolean annoBisestile(int anno) {
-		 return anno %4 == 0 || anno %100 == 0 && anno %400 == 0 ? true : false; 
+		 return  anno % 4 == 0 && anno % 100 != 0 || anno % 400 == 0 ? true : false; 
 	}
 	static String numeroInLettere(int num) {
 		String[] intToString = new String[4];
@@ -22,6 +22,8 @@ public class ES_1 {
 		intToString[1] = "uno";
 		intToString[2] = "due";
 		intToString[3] = "tre";
+		
+		// return num >= 0 && num <= 3 ? intToString[num] : "Not in range >= 0; <= 3";  
 		
 		switch(num) {
 		  case 0,1,2,3:
@@ -42,12 +44,15 @@ public class ES_1 {
 
 			while( splitString.length > 0 && i < splitString.length)
 			{
-				//i + 1 == splitString.length ? System.out.print("\n") : System.out.print(splitString[i] + ",");  
-				if (i + 1 == splitString.length) {
-					System.out.print(splitString[i] + "\n");
-				}else {
-					System.out.print(splitString[i] + ",");
-				} 
+				//i + 1 == splitString.length ? System.out.print("\n") : System.out.print(splitString[i] + ",");
+				String resp = i + 1 == splitString.length ? "\n" : splitString[i] + ",";
+				System.out.print(resp);
+				
+//				if (i + 1 == splitString.length) {
+//					System.out.print(splitString[i] + "\n");
+//				}else {
+//					System.out.print(splitString[i] + ",");
+//				} 
 			  i++;
 			}	
 		}
