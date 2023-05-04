@@ -5,7 +5,7 @@ public class ES_1 {
 	public static void main(String[] args) {
 		System.out.println(stringaPariDispari("ciaoz"));
 		System.out.println(annoBisestile(2020));
-		System.out.println(numeroInLettere(4));
+		System.out.println(numeroInLettere(3));
 		countDown(3);
 		testWhile();
 	}
@@ -14,11 +14,7 @@ public class ES_1 {
 		return str.length() %2 == 0 ? "pari": "dispari";
 	}
 	static Boolean annoBisestile(int anno) {
-		if (anno %4 == 0 || anno %100 == 0 && anno %400 == 0 ) {
-			return true;
-		}else {
-			return false;
-		}
+		 return anno %4 == 0 || anno %100 == 0 && anno %400 == 0 ? true : false; 
 	}
 	static String numeroInLettere(int num) {
 		String[] intToString = new String[4];
@@ -46,14 +42,12 @@ public class ES_1 {
 
 			while( splitString.length > 0 && i < splitString.length)
 			{
-				
 				//i + 1 == splitString.length ? System.out.print("\n") : System.out.print(splitString[i] + ",");  
 				if (i + 1 == splitString.length) {
 					System.out.print(splitString[i] + "\n");
 				}else {
 					System.out.print(splitString[i] + ",");
-				}
-			  
+				} 
 			  i++;
 			}	
 		}
